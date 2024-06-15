@@ -44,11 +44,10 @@ public class DragDropActionWithActionTest {
     }
 
     @Test
-    void ActionDragAndDrop(){
+    void actionDragAndDropTest(){
         //В Selenide есть команда $(element).dragAndDrop($(to-element)),
-// проверьте работает ли тест, если использовать её вместо actions()
+        // проверьте работает ли тест, если использовать её вместо actions()
         
-       
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDrop(to("#column-b"));
         $("#column-a").$(byTagAndText("header", "B")).shouldBe(exist);
